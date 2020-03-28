@@ -103,7 +103,7 @@ void Dio_WriteChannel( Dio_ChannelType ChannelId, Dio_LevelType Level)
     }
 }
 
-
+#if FLIP_CHANNEL_API == STD_ON
 /******************************************************************************************
  *  Service Name: Dio_FlipChannel
  *  Parameters(in): ChannelId: Id of the Dio Channel
@@ -114,7 +114,6 @@ void Dio_WriteChannel( Dio_ChannelType ChannelId, Dio_LevelType Level)
  *  Description: Flip the level of the selected Dio Channel group and return the new value
  *****************************************************************************************/
 
-#if FLIP_CHANNEL_API == STD_ON
 Dio_LevelType Dio_FlipChannel( Dio_ChannelType ChannelId )
 {
     uint8 Port_no;
@@ -156,4 +155,5 @@ Dio_LevelType Dio_FlipChannel( Dio_ChannelType ChannelId )
     }
     return result;
 }
+
 #endif

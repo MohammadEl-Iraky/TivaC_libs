@@ -34,6 +34,7 @@ static const Port_ConfigChannel * g_ConfigPtr = NULL_PTR;
 
 void Port_Init( const Port_ConfigType* ConfigPtr )
 {
+
     uint8 Port_no;
     uint8 Pin_no;
     uint8 i = 0;
